@@ -28,7 +28,7 @@ body, html {
     margin-bottom: 30px; /* Adjusted space */
     text-align: center;
     position: relative;
-    top: -50px; /* Title moved 50px higher */
+    top: -80px; /* Title moved 80px higher */
 }
 
 /* Container for buttons */
@@ -71,20 +71,18 @@ body, html {
 .top {
     position: absolute;
     top: -90px; /* Adjusted for the triangle */
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .bottom-left {
     position: absolute;
     bottom: -20px;
-    left: 20px;
+    left: 40px;
 }
 
 .bottom-right {
     position: absolute;
     bottom: -20px;
-    right: 20px;
+    right: 40px;
 }
 
 /* Small circular button at the bottom-right corner */
