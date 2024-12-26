@@ -1,31 +1,23 @@
-// Tab Navigation
-function showTab(tabName) {
-    const tabs = document.querySelectorAll('.tab-content');
-    tabs.forEach(tab => {
-        tab.style.display = tab.id === tabName ? 'block' : 'none';
+// JavaScript for hover effects and basic interactivity
+document.addEventListener("DOMContentLoaded", () => {
+    // Get all circular buttons
+    const buttons = document.querySelectorAll(".circle-button");
+
+    // Add hover effect to buttons
+    buttons.forEach(button => {
+        button.addEventListener("mouseover", () => {
+            button.style.transform = "scale(1.1)";  // Increase size on hover
+        });
+
+        button.addEventListener("mouseout", () => {
+            button.style.transform = "scale(1)";   // Return to original size
+        });
     });
-}
 
-// Project Click
-function openProject(projectId) {
-    alert(`Open and display details for ${projectId}`);
-}
-
-// Password Protection for Editing Section
-function checkPassword() {
-    const password = document.getElementById('password-input').value;
-    const correctPassword = 'admin123'; // @TODO: Change this password to your own
-    if (password === correctPassword) {
-        document.getElementById('admin-area').classList.remove('hidden');
-    } else {
-        alert('Incorrect password!');
-    }
-}
-
-// Add steps for project editing
-function addStep() {
-    const stepContainer = document.getElementById('steps-container');
-    const stepInput = document.createElement('input');
-    stepInput.placeholder = 'New step'; // @TODO: Modify placeholder text if needed
-    stepContainer.appendChild(stepInput);
-}
+    // Small button (bottom right) - currently no functionality
+    const smallButton = document.querySelector(".small-circle-button");
+    smallButton.addEventListener("click", () => {
+        // Placeholder for future functionality
+        console.log("Small button clicked");  // @TODO: Add functionality
+    });
+});
