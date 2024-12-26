@@ -4,88 +4,85 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
-a {
-    text-decoration: none;
-    color: inherit;
-}
-ul {
-    list-style: none;
-}
-nav {
-    background: #222;
-    padding: 1rem;
-    position: fixed;
+
+/* Full-screen Background */
+.background-image {
+    position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-image: url('homeBG.jpg'); 
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* To make sure background is behind the buttons */
 }
-nav ul {
+
+/* Button container */
+.button-container {
     display: flex;
-    justify-content: space-around;
-}
-nav ul li a {
-    color: white;
-    padding: 0.5rem;
-}
-nav ul li a:hover {
-    background: #444;
-}
-
-/* Content */
-section {
-    padding: 5rem 2rem;
-    margin-top: 60px;
-}
-h1, h2, h3 {
-    color: #222;
-}
-.tab-content {
-    display: none;
-}
-.tab-link {
-    margin: 0 1rem;
-    padding: 0.5rem;
-    cursor: pointer;
-    border: none;
-    background: #f0f0f0;
-}
-.tab-link:hover {
-    background: #ddd;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
-/* Hidden content initially */
-.hidden {
-    display: none;
-}
-
-/* Projects Carousel */
-.project-carousel {
+/* Positioning the buttons in a triangle formation */
+.button-container a {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
     display: flex;
-    gap: 2rem;
-}
-.project-item {
-    background: #fff;
-    padding: 2rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    width: 30%;
-}
-.project-item:hover {
-    transform: scale(1.05);
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    text-decoration: none;
     transition: all 0.3s ease;
+    margin: 15px 0;
 }
 
-/* Password input and editing */
-#edit-projects input {
-    padding: 0.5rem;
-    margin-top: 1rem;
+.button-home {
+    position: absolute;
+    top: 0;
 }
-#steps-container {
-    margin-top: 1rem;
+
+.button-projects {
+    position: absolute;
+    left: 0;
+    top: 80px; /* Adjusted for spacing */
+}
+
+.button-contact {
+    position: absolute;
+    left: 80px; /* Adjusted for spacing */
+    top: 160px; /* Adjusted for spacing */
+}
+
+/* Hover effects */
+.button-container a:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+/* Optional: Add shadow effect to buttons */
+.button-container a:active {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
