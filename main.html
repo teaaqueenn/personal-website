@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#personal-projects">Personal Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Page -->
+    <section id="home">
+        <div class="content">
+            <h1>Welcome to My Portfolio</h1>
+            <div class="tabs">
+                <button class="tab-link" onclick="showTab('about')">About Me</button>
+                <button class="tab-link" onclick="showTab('work')">Work Experience</button>
+                <button class="tab-link" onclick="showTab('leadership')">Leadership</button>
+            </div>
+
+            <div id="about" class="tab-content">
+                <h2>About Me</h2>
+                <p><!-- @TODO: Add your personal bio here. --></p>
+            </div>
+
+            <div id="work" class="tab-content">
+                <h2>Work Experience</h2>
+                <p><!-- @TODO: Add details of your work experience here. --></p>
+            </div>
+
+            <div id="leadership" class="tab-content">
+                <h2>Leadership</h2>
+                <p><!-- @TODO: Add information about your leadership roles here. --></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Projects -->
+    <section id="personal-projects">
+        <h2>Personal Projects</h2>
+        <div class="project-carousel">
+            <div class="project-item" onclick="openProject('project1')">
+                <h3><!-- @TODO: Add project title here. --></h3>
+                <p><!-- @TODO: Add short project description here. --></p>
+            </div>
+            <div class="project-item" onclick="openProject('project2')">
+                <h3><!-- @TODO: Add project title here. --></h3>
+                <p><!-- @TODO: Add short project description here. --></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Edit Personal Projects (Password Protected) -->
+    <section id="edit-projects" class="hidden">
+        <h2>Edit Projects</h2>
+        <input type="password" id="password-input" placeholder="Enter password" />
+        <button onclick="checkPassword()">Submit</button>
+
+        <div id="admin-area" class="hidden">
+            <h3>Edit Project</h3>
+            <form>
+                <input type="text" id="project-title" placeholder="Title" />
+                <textarea id="project-description" placeholder="Description"></textarea>
+                <button type="button" onclick="addStep()">Add Step</button>
+                <div id="steps-container"></div>
+                <input type="file" id="project-photos" multiple />
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/yourname">LinkedIn</a></li><!-- @TODO: Replace with your LinkedIn URL -->
+            <li><a href="https://github.com/yourname">GitHub</a></li><!-- @TODO: Replace with your GitHub URL -->
+            <li><a href="mailto:yourname@example.com">Email</a></li><!-- @TODO: Replace with your email address -->
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

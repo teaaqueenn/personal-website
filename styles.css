@@ -1,0 +1,91 @@
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style: none;
+}
+nav {
+    background: #222;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+nav ul li a {
+    color: white;
+    padding: 0.5rem;
+}
+nav ul li a:hover {
+    background: #444;
+}
+
+/* Content */
+section {
+    padding: 5rem 2rem;
+    margin-top: 60px;
+}
+h1, h2, h3 {
+    color: #222;
+}
+.tab-content {
+    display: none;
+}
+.tab-link {
+    margin: 0 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border: none;
+    background: #f0f0f0;
+}
+.tab-link:hover {
+    background: #ddd;
+}
+
+/* Hidden content initially */
+.hidden {
+    display: none;
+}
+
+/* Projects Carousel */
+.project-carousel {
+    display: flex;
+    gap: 2rem;
+}
+.project-item {
+    background: #fff;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    width: 30%;
+}
+.project-item:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Password input and editing */
+#edit-projects input {
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+#steps-container {
+    margin-top: 1rem;
+}
