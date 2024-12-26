@@ -27,6 +27,8 @@ body, html {
     color: #41454e;  /* Dark text color */
     margin-bottom: 30px; /* Adjusted space */
     text-align: center;
+    position: relative;
+    top: -50px; /* Title moved 50px higher */
 }
 
 /* Container for buttons */
@@ -39,11 +41,11 @@ body, html {
     height: 200px; /* Adjusted height for positioning */
 }
 
-/* Styling for each button */
+/* Styling for each circular button */
 .circle-button {
     width: 90px;
     height: 90px;
-    border-radius: 0%;
+    border-radius: 50%; /* Circular shape */
     background-color: #f2edf0;
     color: #41454e; /* Dark color text */
     font-size: 1rem;
@@ -55,6 +57,8 @@ body, html {
     align-items: center;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Button shadow */
+    background: radial-gradient(circle, #f3dce2, #e6c6d0); /* Light gradient shadow */
+    outline: none; /* Remove outline */
 }
 
 /* Hover effect: slightly larger and shadow effect */
@@ -63,22 +67,24 @@ body, html {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);  /* More pronounced shadow */
 }
 
-/* Positioning the buttons in a triangle */
+/* Positioning the buttons in an equilateral triangle */
 .top {
     position: absolute;
-    top: -50px; /* Shift up */
+    top: -90px; /* Adjusted for the triangle */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .bottom-left {
     position: absolute;
-    bottom: -20px; 
-    left: -50px;
+    bottom: -20px;
+    left: 20px;
 }
 
 .bottom-right {
     position: absolute;
-    bottom: -20px; 
-    right: -50px;
+    bottom: -20px;
+    right: 20px;
 }
 
 /* Small circular button at the bottom-right corner */
@@ -86,10 +92,12 @@ body, html {
     width: 30px; /* Smaller size */
     height: 30px;
     background-color: #f2edf0;
-    border-radius: 50%;
+    border-radius: 50%; /* Circular shape */
     position: fixed;
     bottom: 20px;
     right: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for small button */
     cursor: pointer;
+    background: radial-gradient(circle, #f3dce2, #e6c6d0); /* Gradient shadow */
+    outline: none; /* Remove outline */
 }
