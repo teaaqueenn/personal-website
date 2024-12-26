@@ -8,7 +8,7 @@
 /* Background setup */
 body, html {
     height: 100%;
-    font-family: 'Roboto', sans-serif; /* Using Roboto font */
+    font-family: 'Roboto', sans-serif;  /* Roboto font */
 }
 
 .background {
@@ -43,7 +43,7 @@ body, html {
 .circle-button {
     width: 90px;
     height: 90px;
-    border-radius: 50%;
+    border-radius: 0%;
     background-color: #f2edf0;
     color: #41454e; /* Dark color text */
     font-size: 1rem;
@@ -71,13 +71,13 @@ body, html {
 
 .bottom-left {
     position: absolute;
-    bottom: -20px; /* Increased space between bottom buttons */
+    bottom: -20px; 
     left: -50px;
 }
 
 .bottom-right {
     position: absolute;
-    bottom: -20px; /* Increased space between bottom buttons */
+    bottom: -20px; 
     right: -50px;
 }
 
